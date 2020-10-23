@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136641275367",
+    "firebase_url": "https://succor-1b25d.firebaseio.com",
+    "project_id": "succor-1b25d",
+    "storage_bucket": "succor-1b25d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136641275367:android:acce43efbbd2ad7d67c942",
+        "android_client_info": {
+          "package_name": "com.flawlessconcepts.succor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136641275367-m3i66tppep23jcd28s9nobp8tdbiu5oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flawlessconcepts.succor",
+            "certificate_hash": "dc5d2b19eb04182f3bd2d775a73dc432a5b0e166"
+          }
+        },
+        {
+          "client_id": "136641275367-qutrbn4lql3sp2oq8raidf715h85bcch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkUJJtvL5WjrLA3A7XSveEXP4wdc_peV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136641275367-qutrbn4lql3sp2oq8raidf715h85bcch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

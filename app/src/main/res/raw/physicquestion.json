@@ -1,0 +1,38 @@
+{
+  "table": "Physics Questions",
+  "question": [
+    {
+      "id": "1",
+      "text": "What is the first element on the periodic table",
+      "answers": [
+        "hydrogen",
+        "helium",
+        "lithium",
+        "boron"
+      ],
+      "subject": "physics"
+    },
+    {
+      "id": "2",
+      "text": "What is the unit of work?",
+      "answers": [
+        "Joules",
+        "Kelvin",
+        "Faraday",
+        "Meters"
+      ],
+      "subject": "physics"
+    },
+    {
+      "id": "3",
+      "text": "What is the Si unit of length?",
+      "answers": [
+        "cm",
+        "m",
+        "km",
+        "miles"
+      ],
+      "subject": "physics"
+    }
+  ]
+}

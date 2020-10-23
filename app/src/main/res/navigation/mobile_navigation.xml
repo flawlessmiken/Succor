@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.flawlessconcepts.succor.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_bookmarksFragment"
+            app:destination="@id/bookmarksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="com.flawlessconcepts.succor.ui.takeanote.NoteListFragment"
+        android:label="NoteListFragment" />
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.flawlessconcepts.succor.ui.topics.TopicsFragment"
+        android:label="TopicsFragment" >
+        <action
+            android:id="@+id/action_topicsFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.flawlessconcepts.succor.ui.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.flawlessconcepts.succor.ui.bookmarks.BookmarksFragment"
+        android:label="Bookmarks" />
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.flawlessconcepts.succor.ui.lessons.LessonsFragment"
+        android:label="LessonsFragment" >
+        <argument
+            android:name="topic_id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_lessonsFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/topicsFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.flawlessconcepts.succor.ui.questions.QuestionsFragment"
+        android:label="QuestionsFragment" >
+        <action
+            android:id="@+id/action_questionsFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="subjectid"
+            app:argType="long" />
+        <argument
+            android:name="is_study_mood"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.flawlessconcepts.succor.ui.result.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+        <argument
+            android:name="correct"
+            app:argType="integer" />
+        <argument
+            android:name="failed"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.example.android.navigation.GameWonFragment"
+        android:label="fragment_game_won"
+        tools:layout="@layout/fragment_game_won" />
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.android.navigation.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" />
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.flawlessconcepts.succor.ui.subject.SubjectFragment"
+        android:label="SubjectFragment" >
+        <action
+            android:id="@+id/action_subjectFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment" />
+    </fragment>
+</navigation>

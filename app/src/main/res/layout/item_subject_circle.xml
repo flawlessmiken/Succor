@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="subject"
+            type="com.flawlessconcepts.succor.database.Subject" />
+
+        <variable
+            name="clickListener"
+            type="com.flawlessconcepts.succor.adapters.SubjectListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackground"
+        android:layout_margin="@dimen/nav_header_vertical_spacing">
+
+        <ImageView
+            android:id="@+id/image_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_width="2dp"
+            android:src="@drawable/grad_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setImageUrl="@{subject}" />
+
+        <TextView
+            android:id="@+id/sub_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|left"
+            android:text="agriculture"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_head"
+            app:setSubjectName="@{subject}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

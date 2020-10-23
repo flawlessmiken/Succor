@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="lesson"
+            type="com.flawlessconcepts.succor.database.lessonitem.LessonItem" />
+
+        <variable
+            name="clickListener"
+            type="com.flawlessconcepts.succor.adapters.BaseNumberListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="@{() -> clickListener.onClick(lesson)}"
+        android:id="@+id/card_view"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/curved_circle_stroke_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:text="12" />
+
+    </androidx.cardview.widget.CardView>
+</layout>
